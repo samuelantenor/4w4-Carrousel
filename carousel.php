@@ -1,15 +1,11 @@
-<?php 
+<?php
 /**
- * Plugin name: Carousel
- * Author: Samuel-Andre Antenor
- * Author URL: 
- * Description: Permet d'afficher les images d'une galerie dans une boite modale
- * navigable.
- * 
- * 
+ * Plugin Name: Carrousel
+ * Author: Eddy Martin
+ * Author uri: https://github.com/eddytuto
+ * Description: Permet d'afficher les images d'une galerie dans une boîte modale naviguable
  */
 
- 
  /* style.css  formater et animer le carrousel */
  /* carrousel.js  pour contrôler le carrousel */
  /* boîte modale qui contiendra le carrousel */
@@ -36,7 +32,7 @@ function enfiler_script_css()
             plugin_dir_url(__FILE__) . 'js/carrousel.js',
             array(),
             $version_js,
-            true
+            true // ajoute le script carrousel.js à la fin de la page
     );
 
 }
