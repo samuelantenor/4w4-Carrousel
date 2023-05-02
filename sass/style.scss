@@ -53,3 +53,16 @@
     display : inline-block;
     margin: 5px;
 }
+.carrouselBoiteModale__controles{
+    position: absolute;
+  bottom: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.carrousel__prev,
+.carrousel__next {
+  cursor: pointer;
+}
