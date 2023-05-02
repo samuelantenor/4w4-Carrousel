@@ -1,11 +1,11 @@
 .carrousel {
-  position: absolute;
+  position: fixed;
   width: 50%;
   height: 50%;
   top: 25%;
   left: 25%;
   border: 1px solid #444;
-  background-color: aquamarine;
+  background-color: rgb(255, 255, 255);
   transform: scale(0);
   transition: transform 0.5s;
 }
@@ -51,4 +51,4 @@
 .carrousel__rad {
   display: inline-block;
   margin: 5px;
-}/*# sourceMappingURL=style.css.map */
+}
