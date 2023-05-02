@@ -19,10 +19,14 @@
    let ancien_index = -1
    let position = 0 // permet d'indexer les image de la galerie et 
    let total_images = galerie__img.length;
+   let carrousel_initialized = false;
    /* ----------------------------------------------------  ouvrir boîte modale */
    bouton.addEventListener('mousedown', function(){
     carrousel.classList.add('carrousel--activer')
-    ajouter_img_dans_carrousel()
+    if (!carrousel_initialized) {
+      ajouter_img_dans_carrousel();
+      carrousel_initialized = true;
+  }
 })
 
    /* ----------------------------------------------------  fermer boîte modale */
@@ -86,14 +90,13 @@ function creation_img_carrousel(elm){
    function afficher_image(index){
    
      if (ancien_index != -1){
-      // carrousel__figure.children[ancien_index].style.opacity = 0  
-      carrousel__figure.children[ancien_index].classList.remove('carrousel__img--activer')
-      //carrousel__form.children[ancien_index].checked 
-     }
-     // carrousel__figure.children[index].style.opacity = 1
-     carrousel__figure.children[index].classList.add('carrousel__img--activer')
-     ancien_index = index
-   }
+            carrousel__figure.children[ancien_index].classList.remove('carrousel__img--activer')
+            carrousel__form.children[ancien_index].checked = false;
+        }
+        carrousel__figure.children[index].classList.add('carrousel__img--activer')
+        carrousel__form.children[index].checked = true;
+        ancien_index = index
+    }
    
    /*
    permet de vérifier si la classe « carrousel--activer » 
